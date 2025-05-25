@@ -86,7 +86,7 @@ export default function PlaylistPage() {
 	return (
 		<div className="">
 			{/* Ở đây sử dụng Carousel có thể xài với mọi loại khung component */}
-			<Carousel title="Playlist hiện tại" items={playlists} renderItem={(pl, i) => (
+			<Carousel title="Playlist" items={playlists} renderItem={(pl, i) => (
 				<PlaylistCard key={i} id={pl.id} coverUrl={pl.coverUrl} description={pl.description}/>
 			)}/>
 		</div>

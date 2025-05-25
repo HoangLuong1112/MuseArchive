@@ -78,7 +78,7 @@ export default function TrackPage() {
     return (
         <div className="">
             {/* Ở đây sử dụng Carousel có thể xài với mọi loại khung component */}
-            <Carousel title="Các bài hát (Track) thịnh hành" items={tracks} renderItem={(item, i) => (
+            <Carousel title="Các bài hát thịnh hành" items={tracks} renderItem={(item, i) => (
                 <TrackCard key={i} id={item.id} trackName={item.title} coverUrl={item.albumArt} />
             )}/>
         </div>
