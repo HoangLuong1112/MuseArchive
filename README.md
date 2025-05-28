@@ -1,6 +1,6 @@
 Hello there friend
 
-Boy is this cold
+Boy is this cold, I tell you man. I hate this
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
