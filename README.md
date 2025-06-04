@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+Hé he
+
 ## Getting Started
 After download this repository, open the project with your compiler (recommended VS Code for Window because i code in that)
 Go to the terminal while at the project(CMD or Powershell) , install npm or bun
