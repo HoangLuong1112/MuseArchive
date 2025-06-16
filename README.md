@@ -1,3 +1,4 @@
+It's playtime
 
 ## Getting Started
 After download this repository, open the project with your compiler (recommended VS Code for Window because i code in that)
