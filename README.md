@@ -1,3 +1,5 @@
+Wellcome to MuseArchive, the shitiest Music App you can find
+
 ## Getting Started
 After download this repository, open the project with your compiler (recommended VS Code for Window because i code in that)
 Go to the terminal while at the project(CMD or Powershell) , install npm or bun
