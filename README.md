@@ -1,4 +1,4 @@
-Wellcome to MuseArchive, the shitiest Music App you can find
+Wellcome to MuseArchive
 
 ## Getting Started
 After download this repository, open the project with your compiler (recommended VS Code for Window because i code in that)
