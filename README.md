@@ -1,4 +1,4 @@
-## Getting Started
+## Getting Started ssss
 After download this repository, open the project with your compiler (recommended VS Code for Window because i code in that)
 Go to the terminal while at the project(CMD or Powershell) , install npm or bun
 
