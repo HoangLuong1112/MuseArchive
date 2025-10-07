@@ -14,7 +14,7 @@ export default function Home() {
 
 	useEffect(() => {
 		if (!isLoading && !currentUser) {
-			router.push('/loginpage'); // Chuyển hướng nếu chưa đăng nhập
+			router.push('/'); // Chuyển hướng nếu chưa đăng nhập
 		}
 	}, [isLoading, currentUser, router]);
 
