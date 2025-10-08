@@ -66,7 +66,7 @@ export default function AlbumPage() {
                 console.error('Error fetching musicians: ', err);
             }
         };
-        fetchAlbums();
+        fetchAlbums();  // Not working when add fetchAlbums to dependency array
     }, [getAccessToken])
     
 
