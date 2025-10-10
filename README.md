@@ -1,4 +1,4 @@
-Wellcome to MuseArchive, the best Music app on my library
+Wellcome to MuseArchive
 
 ## Getting Started
 After download this repository, open the project with your compiler (recommended VS Code for Window because i code in that)
