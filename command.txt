@@ -1,0 +1,17 @@
+Basic Nextjs:
+- Tạo dự án mới: npx create-next-app@latest
+- Chạy dự án: npm run dev
+- Chạy dự án test product có lỗi hay thiếu sót không: npm run build
+
+Có thể cài bun để chạy nhanh hơn npm
+lệnh check phiên bản tailwindcss: npm list tailwindcss
+hoặc có thể vô package.json mà coi
+
+tắt chương trình: ctrl + c
+cd :tới thư mục
+cd .. : trở về thư mục cha 1 cấp phía trên
+cd ..\.. : lùi 2 cấp thư mục
+
+git add .
+git commit -m "Cập nhật mới"
+git push origin main
