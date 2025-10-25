@@ -1,4 +1,4 @@
-Wellcome to MuseArchive, will finish in 2 year
+Wellcome to MuseArchive, will finish in 2 year, ye yeah
 
 ## Getting Started
 After download this repository, open the project with your compiler (recommended VS Code for Window because i code in that)
