@@ -1,5 +1,4 @@
-Wellcome to MuseArchive, will finish in 2 year, hell yeah
-
+Wellcome to MuseArchive
 ## Getting Started
 After download this repository, open the project with your compiler (recommended VS Code for Window because i code in that)
 Go to the terminal while at the project(CMD or Powershell) , install npm or bun
