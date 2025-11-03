@@ -1,4 +1,4 @@
-Wellcome to MuseArchive, need to fix it 
+Wellcome to MuseArchive, need to fix it NOW
 
 ## Getting Started
 After download this repository, open the project with your compiler (recommended VS Code for Window because i code in that)
