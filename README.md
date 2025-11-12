@@ -1,5 +1,6 @@
 Wellcome to MuseArchive, i dont want to work any more, i'm only 21 and i already want to go in forest and live in it.
 
+Fuck my life
 
 ## Getting Started
 After download this repository, open the project with your compiler (recommended VS Code for Window because i code in that)
