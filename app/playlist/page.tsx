@@ -34,52 +34,52 @@ export default function PlaylistPage() {
 	// }, [])
 
 	useEffect(() => {
-			const fetchPlaylists = async () => {
-				const token = await getAccessToken();
-				if (!token) {
-					console.warn('Không tìm thấy access token');
+		const fetchPlaylists = async () => {
+			const token = await getAccessToken();
+			if (!token) {
+				console.warn('Không tìm thấy access token');
+				return;
+			}
+
+			try {
+				// console.log('Access token gửi request Playlists :', token);
+				const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}api/playlists/`, {
+					method: 'GET',
+					headers: {
+						'Authorization': `Bearer ${token}`,
+						'Content-Type': 'application/json',
+					}
+				});
+				if(!res.ok) {
+					console.error('Failed to fetch playlists');
 					return;
 				}
-	
-				try {
-					// console.log('Access token gửi request Playlists :', token);
-					const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}api/playlists/`, {
-						method: 'GET',
-						headers: {
-							'Authorization': `Bearer ${token}`,
-							'Content-Type': 'application/json',
-						}
-					});
-					if(!res.ok) {
-						console.error('Failed to fetch playlists');
-						return;
-					}
-					const data = await res.json();
-					console.log('Danh sách playlist: ', data);
-	
-					//chuyển đổi sang typ
-					const formattedData: Playlist[] = data.map((item: PlaylistListItem) => ({
-						/*export type Playlist ={
-							id: string;
-							playlistName: string;
-							coverUrl: string;
-							description?: string;
-							createdby?: string; //hiển thị user đã tạo cái playlist này hoặc khỏi hiện luôn
-							dayAdd?: string;
-							dayUpdate: string;
-							songs?: SongProps[];
-						} */
-						id: item.id,
-						coverUrl: item.cover_image,
-						description: item.description,
-					}))					
-					setPlaylists(formattedData);
-				} catch (err) {
-					console.error('Error fetching playlists: ', err);
-				}
-			};
-			fetchPlaylists();
-		}, [getAccessToken])
+				const data = await res.json();
+				console.log('Danh sách playlist: ', data);
+
+				//chuyển đổi sang type
+				const formattedData: Playlist[] = data.map((item: PlaylistListItem) => ({
+					/*export type Playlist ={
+						id: string;
+						playlistName: string;
+						coverUrl: string;
+						description?: string;
+						createdby?: string; //hiển thị user đã tạo cái playlist này hoặc khỏi hiện luôn
+						dayAdd?: string;
+						dayUpdate: string;
+						songs?: SongProps[];
+					} */
+					id: item.id,
+					coverUrl: item.cover_image,
+					description: item.description,
+				}))					
+				setPlaylists(formattedData);
+			} catch (err) {
+				console.error('Error fetching playlists: ', err);
+			}
+		};
+		fetchPlaylists();
+	}, [getAccessToken])
 	
 
 

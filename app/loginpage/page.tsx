@@ -16,8 +16,35 @@ const LoginPage = () => {
 		e.preventDefault();
 		setError("");
 
-		//	gọi dữ liệu từ API 
+
+		//	gọi dữ liệu từ API, hiện tại ko có backend
 		try {
+
+			/////////////////////////////////////////////////////////////
+			//	temp, now i dont have backend
+			if(email === 'admin@gmail.com' && password === '123'){
+				const user: Account = {
+					id: "1",
+					userName: "Siêu Admin",
+					password: '123', 
+					email: 'admin@gmail.com',
+					gender: false,
+					birthday: '11/12/2003',
+					avatarPic: '', 
+
+					likedSong: [],         // Response chưa sửa, tạm để rỗng
+					followed: [],          // Response chưa sửa, tạm để rỗng
+					userPlaylist: [],      // Response chưa sửa, tạm để rỗng
+				}
+				login(user, "hehehe", "hehehe")
+				router.push('/')
+				return;
+			} else {
+				throw new Error("Tên đăng nhập hoặc mật khẩu ko đúng")
+			}
+			/////////////////////////////////////////////////////////////
+
+
 			const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}auth/login/`, {
 				method: 'POST',
 				headers: {
