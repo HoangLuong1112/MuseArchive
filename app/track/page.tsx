@@ -38,26 +38,7 @@ export default function TrackPage() {
                 }
                 const data = await res.json();
                 console.log('Danh sách bài hát: ', data);
-                /*export type SongProps = {
-                    id: string;
-                    title: string;
-                    artist: {
-                        id: string;
-                        name: string;
-                    };
-                    albumArt: string;
-                    audioSrc: File; //audioSrc: string;
-                    duration?: number;
-
-                    dayAdd: string; //yyyy-mm-dd 
-                    views: number;
-                    album: {
-                        id: string;
-                        name: string;
-                    };
-                    videoSrc: File;//videoSrc: string;
-                    // các bài hát đơn ko có album gọi là track
-                }; */
+                
                 const formattedData: SongProps[] = data.map((item: TrackListItem) => ({
                     id: item.id,
                     title: item.title,
