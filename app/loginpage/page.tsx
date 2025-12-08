@@ -42,46 +42,48 @@ const LoginPage = () => {
 			} else {
 				throw new Error("Tên đăng nhập hoặc mật khẩu ko đúng")
 			}
+
 			/////////////////////////////////////////////////////////////
+			// need to fix
 
-
-			const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}auth/login/`, {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify({ email, password }),
-			});
+			// const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}auth/login/`, {
+			// 	method: 'POST',
+			// 	headers: {
+			// 		'Content-Type': 'application/json',
+			// 	},
+			// 	body: JSON.stringify({ email, password }),
+			// });
 			
-			console.log('Request body:', JSON.stringify({ email, password }));
+			// console.log('Request body:', JSON.stringify({ email, password }));
 
-			const data = await response.json();
-			console.log('Login: ', data);
+			// const data = await response.json();
+			// console.log('Login: ', data);
 			
-			if (!response.ok) { throw new Error(data.error || "Tên đăng nhập hoặc mật khẩu không đúng");}
+			// if (!response.ok) { throw new Error(data.error || "Tên đăng nhập hoặc mật khẩu không đúng");}
 
-			if (data.user) {
+			// if (data.user) {
 
-				// Chỉnh lại dữ liệu từ json user trả về để gửi sang Context cho đúng type Account
-				const sortedUser: Account = {
-					id: data.user.id,
-					userName: data.user.username,
-					password: '', 				// Không có trả pass, bỏ trống
-					email: data.user.email,
-					gender: data.user.gender,
-					birthday: data.user.birthday,
-					avatarPic: data.user.profile_image || '', //chừng nào sửa lại response rồi sửa
+			// 	// Chỉnh lại dữ liệu từ json user trả về để gửi sang Context cho đúng type Account
+			// 	const sortedUser: Account = {
+			// 		id: data.user.id,
+			// 		userName: data.user.username,
+			// 		password: '', 				// Không có trả pass, bỏ trống
+			// 		email: data.user.email,
+			// 		gender: data.user.gender,
+			// 		birthday: data.user.birthday,
+			// 		avatarPic: data.user.profile_image || '', //chừng nào sửa lại response rồi sửa
 
-					likedSong: [],         // Response chưa sửa, tạm để rỗng
-					followed: [],          // Response chưa sửa, tạm để rỗng
-					userPlaylist: [],      // Response chưa sửa, tạm để rỗng
-				};
+			// 		likedSong: [],         // Response chưa sửa, tạm để rỗng
+			// 		followed: [],          // Response chưa sửa, tạm để rỗng
+			// 		userPlaylist: [],      // Response chưa sửa, tạm để rỗng
+			// 	};
 
-				login(sortedUser, data.tokens.access, data.tokens.refresh); 			// lưu thông tin user đăng nhập vào Context 
-				router.push('/');
-			} else {
-				setError(data.error || 'Lỗi đăng nhập - user không được trả về');
-			}
+			// 	login(sortedUser, data.tokens.access, data.tokens.refresh); 			// lưu thông tin user đăng nhập vào Context 
+			// 	router.push('/');
+			// } else {
+			// 	setError(data.error || 'Lỗi đăng nhập - user không được trả về');
+			// }
+		/////////////////////////////////////////////////////////////////////////////
 		} catch (err) {
 			if (err instanceof Error) {
 				setError(err.message);
