@@ -18,8 +18,8 @@ export default function Home() {
 		}
 	}, [isLoading, currentUser, router]);
 
-	if (isLoading) 
-		return <div className="text-white p-4">Đang tải...</div>;
+	// if (isLoading) 
+	// 	return <div className="text-white p-4">Đang tải...</div>;
 
 	// Tránh render nội dung khi đang redirect
 	if (!currentUser) return null;
